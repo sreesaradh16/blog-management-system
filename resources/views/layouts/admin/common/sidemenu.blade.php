@@ -23,9 +23,9 @@
     </div>
     <div class="sidebar-navs"></div>
     <ul class="side-menu">
-        <li>
-            <a class="side-menu__item" href=""><i class="side-menu__icon ti-home"></i><span class="side-menu__label">Dashboard</span></a>
-        </li>
+        <li> <a class="side-menu__item" href="{{ route('dashboard') }}"><i class="side-menu__icon ti-home"></i><span class="side-menu__label">Dashboard</span></a></li>
+        <li> <a class="side-menu__item" href="{{ route('categories.index') }}"><i class="side-menu__icon ti-folder"></i><span class="side-menu__label">Category</span></a></li>
+        <li> <a class="side-menu__item" href="{{ route('posts.index') }}"><i class="side-menu__icon ti-write"></i><span class="side-menu__label">Post</span></a></li>
     </ul>
 </aside>
 <!--/APP-SIDEBAR-->
@@ -42,7 +42,7 @@
             <div class="d-flex order-lg-2 ml-auto header-right-icons">
                 <div class="dropdown profile-1">
                     <a href="#" data-toggle="dropdown" class="nav-link pr-2 leading-none d-flex">
-                        <span> <img src="{{ asset(auth()->user()->image_url) }}" alt="profile-user" class="avatar  profile-user brround cover-image"> </span>
+                        <span> <img src="{{ asset('images/avatar.jpg')}}" alt="profile-user" class="avatar  profile-user brround cover-image"> </span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                         <div class="drop-heading">
